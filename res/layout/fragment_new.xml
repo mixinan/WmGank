@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/srl_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c0c0c0">
+
+    <ScrollView
+        android:id="@+id/sv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sdv_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="今天干货还未更新，请耐心等待^_^，感谢干货集中营编辑们的奉献，么么哒！"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <cc.guoxingnan.wmgank.view.MyListView
+                android:id="@+id/lv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:listSelector="#00000000" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+

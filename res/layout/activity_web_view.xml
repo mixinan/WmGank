@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_webview_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:minHeight="46dp"
+        android:onClick="doClick"
+        android:padding="6dp"
+        android:singleLine="true"
+        android:text="GSD1603"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/pb_view"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginTop="-7dp"
+        android:max="100" />
+
+    <WebView
+        android:id="@+id/wb_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+
+    <!-- Application theme. -->
+    <style name="ViaTextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+</resources>

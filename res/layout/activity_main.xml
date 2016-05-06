@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mixinan="http://schemas.android.com/apk/res/cc.guoxingnan.wmgank"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cc.guoxingnan.wmgank.MainActivity" >
+
+	<android.support.v4.view.ViewPager
+	    android:id="@+id/viewpager"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"/>	    
+	    
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingTop="5dp"
+	    android:gravity="center_vertical"
+	    android:background="#88c0c0c0"
+	    android:paddingBottom="5dp">
+	   
+	    <cc.guoxingnan.wmgank.ChangeColorIconWithText
+	        android:id="@+id/tab_welfare"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="38dp"
+	        mixinan:color="#33074507"
+	        mixinan:text_size="15sp"
+	        mixinan:text="@string/tab_welfare"
+	        mixinan:icon="@drawable/welfare"/>
+	        
+	    <cc.guoxingnan.wmgank.ChangeColorIconWithText
+	        android:id="@+id/tab_Android"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="38dp"
+	        mixinan:color="#33074507"
+	        mixinan:text_size="15sp"
+	        mixinan:text="@string/tab_android"
+	        mixinan:icon="@drawable/android"/>
+	        
+	    <cc.guoxingnan.wmgank.ChangeColorIconWithText
+	        android:id="@+id/tab_random"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="38dp"
+	        mixinan:color="#33074507"
+	        mixinan:text_size="15sp"
+	        mixinan:text="@string/tab_random"
+	        mixinan:icon="@drawable/tab_new"/>
+	        
+	    <cc.guoxingnan.wmgank.ChangeColorIconWithText
+	        android:id="@+id/tab_about"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="38dp"
+	        mixinan:color="#33074507"
+	        mixinan:text_size="15sp"
+	        mixinan:text="@string/tab_about"
+	        mixinan:icon="@drawable/about"/>
+	    
+	</LinearLayout>
+	
+</LinearLayout>
