@@ -6,8 +6,10 @@ import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 import cc.guoxingnan.wmgank.R;
 import cc.guoxingnan.wmgank.entity.Girl;
 
@@ -53,6 +55,14 @@ public class ViewPagerAdapter extends PagerAdapter {
                 .placeholder(R.drawable.icon_image_loading).error(R.drawable.icon_image_failure)
                 .diskCacheStrategy(DiskCacheStrategy.ALL).into(img);
         container.addView(view);
+        img.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				//TODO
+				Toast.makeText(mContext, "¹Ø±Õ±¾Ò³Ãæ", Toast.LENGTH_SHORT).show();
+			}
+		});
         return view;
     }
 
