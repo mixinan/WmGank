@@ -66,10 +66,11 @@ int drawable icon_type 0x7f020018
 int drawable qq 0x7f020019
 int drawable refresh 0x7f02001a
 int drawable scan 0x7f02001b
-int drawable tab_bg 0x7f02001c
-int drawable tab_new 0x7f02001d
-int drawable title_bar 0x7f02001e
-int drawable welfare 0x7f02001f
+int drawable selector 0x7f02001c
+int drawable tab_bg 0x7f02001d
+int drawable tab_new 0x7f02001e
+int drawable title_bar 0x7f02001f
+int drawable welfare 0x7f020020
 int id action_about 0x7f070032
 int id action_android 0x7f07002f
 int id action_qq 0x7f070031

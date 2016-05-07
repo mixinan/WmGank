@@ -17,8 +17,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+import cc.guoxingnan.wmgank.ImageGalleryActivity;
 import cc.guoxingnan.wmgank.R;
 import cc.guoxingnan.wmgank.adapter.WelfareRecyclerViewAdapter;
+import cc.guoxingnan.wmgank.adapter.WelfareRecyclerViewAdapter.OnItemClickListener;
 import cc.guoxingnan.wmgank.entity.Girl;
 import cc.guoxingnan.wmgank.view.SpacesItemDecoration;
 
@@ -40,6 +43,7 @@ public class WelfareFragment extends Fragment implements SwipeRefreshLayout.OnRe
 	private ArrayList<Girl> girls;
 	private int page = 1;
 
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -59,26 +63,31 @@ public class WelfareFragment extends Fragment implements SwipeRefreshLayout.OnRe
 		mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_welfare);
 		StaggeredGridLayoutManager layoutManager= new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
 		mRecyclerView.setLayoutManager(layoutManager);
-		
+
 		girls = new ArrayList<Girl>();
 		adapter = new WelfareRecyclerViewAdapter(mContext, girls);
 		mRecyclerView.setAdapter(adapter);
-		
+
 		//设置item之间的间隔
-        SpacesItemDecoration decoration=new SpacesItemDecoration(12);
-        mRecyclerView.addItemDecoration(decoration);
-        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
-        
-//		mRecyclerView.setOnItemClickListener(new OnItemClickListener() {
-//
-//			@Override
-//			public void onItemClick(AdapterView<?> parent, View view,
-//					int position, long id) {
-//				Girl girl = girls.get(position);
-//				Toast.makeText(mContext, "打开图片："+girl.getUrl(), Toast.LENGTH_SHORT).show();
-//				ImageGalleryActivity.launch(mContext, girls, position);
-//			}
-//		});
+		SpacesItemDecoration decoration=new SpacesItemDecoration(12);
+		mRecyclerView.addItemDecoration(decoration);
+		mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+		//点击事件
+		adapter.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemLongClick(View view, int position) {
+				Toast.makeText(mContext, "长按了："+position, Toast.LENGTH_SHORT).show();
+			}
+
+			@Override
+			public void onItemClick(View view, int position) {
+				Toast.makeText(mContext, "点击了："+position, Toast.LENGTH_SHORT).show();
+				ImageGalleryActivity.launch(mContext, girls, position);
+			}
+		});
+
 	}
 
 
