@@ -78,12 +78,12 @@ public class WelfareFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
 			@Override
 			public void onItemLongClick(View view, int position) {
-				Toast.makeText(mContext, "长按了："+position, Toast.LENGTH_SHORT).show();
+				//TODO 
+				Toast.makeText(mContext, "长按了第 "+position+1+" 张图片", Toast.LENGTH_SHORT).show();
 			}
 
 			@Override
 			public void onItemClick(View view, int position) {
-				Toast.makeText(mContext, "点击了："+position, Toast.LENGTH_SHORT).show();
 				ImageGalleryActivity.launch(mContext, girls, position);
 			}
 		});

@@ -44,13 +44,14 @@ public class WelfareRecyclerViewAdapter extends RecyclerView.Adapter<WelfareRecy
 
 		String url = girl.getUrl();
 		Glide.with(mContext).load(url).placeholder(R.color.stay_color).diskCacheStrategy(DiskCacheStrategy.ALL).centerCrop().into(holder.mImageView);
-
+		
+		final int pos = holder.getLayoutPosition();
 		if (listener != null) {
 			holder.itemView.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
-					listener.onItemClick(holder.itemView, position);
+					listener.onItemClick(holder.itemView, pos);
 				}
 
 			});
@@ -59,7 +60,7 @@ public class WelfareRecyclerViewAdapter extends RecyclerView.Adapter<WelfareRecy
 
 				@Override
 				public boolean onLongClick(View v) {
-					listener.onItemLongClick(holder.itemView, position);
+					listener.onItemLongClick(holder.itemView, pos);
 					return false;
 				}
 			});

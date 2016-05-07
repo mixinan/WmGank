@@ -277,6 +277,7 @@ containing a value of this type.
         public static final int tab_new=0x7f02001e;
         public static final int title_bar=0x7f02001f;
         public static final int welfare=0x7f020020;
+        public static final int wujiao=0x7f020021;
     }
     public static final class id {
         public static final int action_about=0x7f070032;

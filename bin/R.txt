@@ -71,6 +71,7 @@ int drawable tab_bg 0x7f02001d
 int drawable tab_new 0x7f02001e
 int drawable title_bar 0x7f02001f
 int drawable welfare 0x7f020020
+int drawable wujiao 0x7f020021
 int id action_about 0x7f070032
 int id action_android 0x7f07002f
 int id action_qq 0x7f070031

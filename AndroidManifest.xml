@@ -12,7 +12,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/tab_new"
+        android:icon="@drawable/wujiao"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light" >
         <activity

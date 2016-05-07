@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+import cc.guoxingnan.wmgank.ImageGalleryActivity;
 import cc.guoxingnan.wmgank.R;
 import cc.guoxingnan.wmgank.entity.Girl;
 
@@ -55,12 +55,13 @@ public class ViewPagerAdapter extends PagerAdapter {
                 .placeholder(R.drawable.icon_image_loading).error(R.drawable.icon_image_failure)
                 .diskCacheStrategy(DiskCacheStrategy.ALL).into(img);
         container.addView(view);
+        
+        // 点击图片，返回图片列表
         img.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				//TODO
-				Toast.makeText(mContext, "关闭本页面", Toast.LENGTH_SHORT).show();
+				((ImageGalleryActivity)mContext).finish();
 			}
 		});
         return view;
